@@ -1,13 +1,13 @@
 import React from 'react'
 import '../REquestQutoe/request.css'
-
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 const RequestQuote = () => {
     return (
         <>
 
-            <div className='container'>
+            <div className='container '>
                 <div className="icon">
-                   
+                   <AiOutlineCloseCircle size={35}/>
                 </div>
                 <h1 className='head'>REQUEST A QUOTE</h1>
                 <p className='para'>
