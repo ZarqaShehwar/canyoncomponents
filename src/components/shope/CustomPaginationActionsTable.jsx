@@ -118,14 +118,12 @@ export default function CustomPaginationActionsTable() {
   return (
 
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 500,maxHeight: 350 }} aria-label="custom pagination table">
+      <Table sx={{ minWidth: 450,maxHeight: 350 }} aria-label="custom pagination table">
         <TableHead>
           <TableRow>
-            <TableCell>
-              <TableSortLabel
-              >
+            <TableCell >
+              
                 PartNo
-              </TableSortLabel>
             
             </TableCell>
             <TableCell style={{ width: 160 }} align="right">

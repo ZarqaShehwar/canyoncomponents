@@ -1,15 +1,15 @@
 
 import React from 'react';
 import './App.css';
-import RequestQuote from './components/REquestQutoe/RequestQuote';
-// import Shop from './components/shope/Shop'
+// import RequestQuote from './components/REquestQutoe/RequestQuote';
+import Shop from './components/shope/Shop'
 function App() {
   
   return (
     <div className="App">
       <header className="App-header">
-        {/* <Shop/> */}
-        <RequestQuote/>
+        <Shop/>
+        {/* <RequestQuote/> */}
       </header>
     </div>
   );
