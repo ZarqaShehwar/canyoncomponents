@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import "./css/shopleft.css"
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 import CheckboxList from './CheckboxeList';
-
+import  dimensions  from "../../static/Dimensions.jpg";
+import SliderComponent from './SliderComponent';
 
 
 const ShopLeft = () => {
   const [selectedCountry, setSelectedCountry] = useState("");
   const countries = ["USA", "Canada", "Mexico", "Brazil", "Japan"];
-
+  const [size, setsize] = useState(0);
+  const [cs, setCs] = useState(0);
+  const [id, setid] = useState(0)
   const handleCountryChange = (event) => {
     setSelectedCountry(event.target.value);
   };
@@ -19,21 +22,38 @@ const ShopLeft = () => {
   ];
   return (
     <div className="main ">
+      <div className='flex'>
 
-      <h2>KEYWORD</h2>
+        <h2>KEYWORD</h2>
+        <div className='hr' ></div>
+      </div>
       <form className='keywoedSearch' action="">
         <div>
-          <input type="text" placeholder='Search' />
+          <input type="text" placeholder='Search' className='searchinput' />
         </div>
-        <button type="submit">Search</button>
+        <button type="submit" className='search'>Search</button>
       </form>
-      <h2>
-        DIMENSIONS
-      </h2>
-      <img src="" alt="StandardImage" />
+      <div className="flex">
+
+
+        <h2>
+          DIMENSIONS(mm)
+        </h2>
+        <div className='hr' ></div>
+       
+        
+
+      </div>
+      <img src={dimensions} alt="StandardImage" width={250}/>
+      <div className="flex">
+
       <h2>STANDARD SIZE</h2>
+      <div className='hr' ></div>
+      </div>
       <p>Standard Size:</p>
-      <select value={selectedCountry} onChange={handleCountryChange}>
+      
+     <div className='p1'>
+     <select value={selectedCountry}className='country' onChange={handleCountryChange}>
         <option value="">Select Country</option>
         {countries.map((country) => (
           <option key={country} value={country}>
@@ -41,30 +61,59 @@ const ShopLeft = () => {
           </option>
         ))}
       </select>
+     </div>
       <div className="row">
         <AiFillCaretDown />
-        <input type="text" className='sizeinput' placeholder='Size' />
+        <input type="text" className='sizeinput' placeholder='Size' value={size} />
         <div className='updown'>
-          <AiFillCaretUp />
-          <AiFillCaretDown />
+          <AiFillCaretUp onClick={()=>{setsize(size+1)}} />
+          <AiFillCaretDown onClick={()=>{setsize(size===0?0:size-1)}} />
 
         </div>
-        <input type="text" className='sizeinput' placeholder='CS' />
+        <input type="text" className='sizeinput' placeholder='CS' value={cs}/>
         <div className='updown'>
-          <AiFillCaretUp />
-          <AiFillCaretDown />
+          <AiFillCaretUp onClick={()=>{setCs(cs+1)}} />
+          <AiFillCaretDown  onClick={()=>{setCs(cs===0?0:cs-1)}}/>
 
         </div>
-        <input type="text" className='sizeinput' placeholder='ID' />
+        <input type="text" className='sizeinput' placeholder='ID' value={id}/>
         <div className='updown'>
-          <AiFillCaretUp />
-          <AiFillCaretDown />
+          <AiFillCaretUp  onClick={()=>{setid(id+1)}}/>
+          <AiFillCaretDown  onClick={()=>{setid(id===0?0:id-1)}} />
 
         </div>
       </div>
+      <div className="flex">
       <h2>TEMPRATURE &deg; C</h2>
-      {/* <SliderComponent /> */}
+      <div className='hr' ></div>
+      </div>
+      <SliderComponent />
+      <div className="flex">
       <h2>BASE MATERIAL TYPE</h2>
+      <div className='hr' ></div>
+      </div>
+      <CheckboxList data={data} />
+      <div className="flex">
+      <h2>Sub MATERIAL TYPE</h2>
+      <div className='hr' ></div>
+      </div>
+      <CheckboxList data={data} />
+          <div className="flex">
+      <h2>Compliance</h2>
+      <div className='hr' ></div>
+            </div>            
+      <CheckboxList data={data} />
+          <div className="flex">
+      <h2>Hardness</h2>
+      <div className='hr' ></div>
+          </div>
+            
+      <CheckboxList data={data} />
+          <div className="flex">
+      <h2>Color</h2>
+      <div className='hr' ></div>
+          </div>
+            
       <CheckboxList data={data} />
 
 

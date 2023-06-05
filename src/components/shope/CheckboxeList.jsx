@@ -3,25 +3,23 @@ import React, { useState } from 'react';
 function CheckboxList({ data }) {
     const [selectedItems, setSelectedItems] = useState([]);
 
-    const handleCheckboxChange = (event) => {
-        const itemId = event.target.value;
-        if (event.target.checked) {
-            setSelectedItems([...selectedItems, itemId]);
-        } else {
-            setSelectedItems(selectedItems.filter((id) => id !== itemId));
-        }
-    };
+const handleCheckboxChange = (event) => {
+    const itemId = event.target.value;
+    if (event.target.checked) {
+        setSelectedItems([...selectedItems, itemId]);
+    } else {
+        setSelectedItems(selectedItems.filter((id) => id!== itemId && id!== itemId.id));
+    }
+    console.log(selectedItems);
+};
 
     return (
         <div>
             {data.map((item) => (
                 <div key={item.id}>
-                    <input
-                        type="checkbox"
-                        value={item.id}
-                        checked={selectedItems.includes(item.id)}
-                        onChange={handleCheckboxChange}
-                    />
+                   
+                    <input type="checkbox" value={item.id}
+                        onChange={handleCheckboxChange}/>
                     <label>{item.name}</label>
                 </div>
             ))}
