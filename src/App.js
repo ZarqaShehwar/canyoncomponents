@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header'
+import {UserContext} from './UserContext'
+import React, { useState } from 'react'
 
 function App() {
+
+  const [sideMenuBar, setsideMenuBar] = useState(false)
+  const [sideMenuBarDropDown, setsideMenuBarDropDown] = useState(false)
+  const [sideMenuBarDropDownIndex, setsideMenuBarDropDownIndex] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <UserContext.Provider value={{sideMenuBar, setsideMenuBar, sideMenuBarDropDown, setsideMenuBarDropDown, sideMenuBarDropDownIndex, setsideMenuBarDropDownIndex}} >
+      <div className="App">
+      <Header/>
+      <Footer/>
     </div>
-  );
+    </UserContext.Provider>
+  )
 }
 
-export default App;
+export default App
+
