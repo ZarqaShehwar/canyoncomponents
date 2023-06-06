@@ -10,7 +10,6 @@ import TableFooter from '@mui/material/TableFooter';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import TableHead from '@mui/material/TableHead';
-import TableSortLabel from '@mui/material/TableSortLabel';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
@@ -20,7 +19,7 @@ import LastPageIcon from '@mui/icons-material/LastPage';
 
 function TablePaginationActions(props) {
   const theme = useTheme();
-  const { count, page, rowsPerPage, onPageChange, orderBy, order, createSortHandler, filterRows  } = props;
+  const { count, page, rowsPerPage, onPageChange  } = props;
 
   const handleFirstPageButtonClick = (event) => {
     onPageChange(event, 0);
