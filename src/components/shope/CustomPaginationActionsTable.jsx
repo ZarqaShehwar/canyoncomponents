@@ -85,17 +85,15 @@ function createData(Partno, StartingPrice, Stock,Material,Color,Hardness,Scale,T
 
 const rows = [
   createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
-  createData('CP80BK21-OR-204', 10.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-204",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
- 
+  createData('CP80BK21-OR-205', 12.00, "OUT OF STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-205",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-206', 15.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-206",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-207', 11.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-207",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-208', 13.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-208",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-209', 14.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-209",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-210', 16.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-210",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-211', 17.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-211",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  createData('CP80BK21-OR-212', 18.00, "IN STOCK","FMK","Black",80,"Shore A","O-Ring","AS568-212",3.53,9.12,"CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA",320,-15),
+  
 ].sort((a, b) => (a.calories < b.calories ? -1 : 1));
 
 export default function CustomPaginationActionsTable() {
