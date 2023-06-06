@@ -1,17 +1,25 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-// import RequestQuote from './components/REquestQutoe/RequestQuote';
-import Shop from './components/shope/Shop'
+import { UserContext } from '../src/UserContext'
+import { Routes, Route, Router } from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import RequestQuote from './components/REquestQutoe/RequestQuote';
 function App() {
-  
   return (
-    <div className="App">
-      <header className="App-header">
-        <Shop/>
-        {/* <RequestQuote/> */}
-      </header>
-    </div>
+   <>
+        <UserContext.Provider value={{  }}>
+          
+
+            <Routes>
+              <Route path='/' element={<Layout  />} />
+              <Route path='/request-quote' element={<RequestQuote />} />
+
+            </Routes>
+       
+
+        </UserContext.Provider>
+   </>
   );
 }
 
