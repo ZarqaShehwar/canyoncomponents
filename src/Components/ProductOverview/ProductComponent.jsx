@@ -1,4 +1,4 @@
-import React,{ useContext, useEffect } from 'react';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import Button from '@mui/material/Button';
@@ -10,8 +10,9 @@ import Paper from '@mui/material/Paper';
 import product from '../../Static/Dimensions.jpg';
 import pdf from '../../Static/Dimensions.jpg';
 import './ProductComponent.css';
-import {useParams} from 'react-router-dom';
+// import {useParams} from 'react-router-dom';
 import Layout from '../Layout/Layout';
+import Recomendeditems from './RecomendedItems';
 
 function createData(AvailableQuantity, LeadTimetoShip, Quantity, Price, Discount) {
   return { AvailableQuantity, LeadTimetoShip, Quantity, Price, Discount};
@@ -26,11 +27,7 @@ function createDataTable1(Quantity1, Quantity2, Price, Discount) {
   return { Quantity1, Quantity2, Price, Discount};
 }
 
-const rowsTable1 = [
-  createDataTable1(0, 99, 1000, 8),
-  createDataTable1(100, 1000, 9909, 10),
-];
-
+// s
 
 
 
@@ -73,7 +70,7 @@ function ProductComponent(props) {
             </span></h2>
             <h3><strong>Color: Black</strong><span></span></h3>
 
-        <div className="table1">
+        {/* <div className="table1">
         <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -94,15 +91,15 @@ function ProductComponent(props) {
               </TableCell>
               <TableCell align="right"><span>
                 {/* ${props.itemData[getIndex(id)].UnitPrice} */}
-                20
-                </span></TableCell>
+                {/* 20 */}
+                {/* </span></TableCell>
               <TableCell align="right"><span>{row1.Discount}%</span></TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
-        </div>
+        </div> */} 
 
 
           <div className="table">
@@ -141,7 +138,7 @@ function ProductComponent(props) {
 </Button>
         </div>
     </div>
-      
+      <Recomendeditems/>
   </Layout>
   )
 }
