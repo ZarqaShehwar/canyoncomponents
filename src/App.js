@@ -7,8 +7,7 @@ import { Routes, Route} from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import RequestQuote from './components/REquestQutoe/RequestQuote';import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header'
-import {UserContext} from './UserContext'
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 function App() {
 
