@@ -1,15 +1,13 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
-import Shop from '../shope/Shop'
-import { UserContext } from '../../UserContext'
-const Layout = () => {
+const Layout = ({children}) => {
     // const {name} = useContext(UserContext)
     return (
         <div>
             
             <Header />
-            <Shop/>
+            {children}
             <Footer />
         </div>
     )
