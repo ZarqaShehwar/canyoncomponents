@@ -66,11 +66,12 @@ function ProductComponent(props) {
             {/* {props.itemData[getIndex(id)].ItemNo} */}
             CB-1345
             </strong></h1>
-          <h3><strong>Color: Black</strong><span></span></h3>
+          
           <h2><span>
             {/* {props.itemData[getIndex(id)].Description} */}
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, totam?
             </span></h2>
+            <h3><strong>Color: Black</strong><span></span></h3>
 
         <div className="table1">
         <TableContainer component={Paper}>

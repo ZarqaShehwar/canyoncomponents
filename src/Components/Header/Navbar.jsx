@@ -168,6 +168,7 @@ export default function NavBar() {
         }
       } >
         <Toolbar>
+          <Link to="/">
           
           <img
             src={logo}
@@ -175,6 +176,7 @@ export default function NavBar() {
             alt='logo'
             sx={{ display: { xs: 'none', sm: 'block' }}}
           />
+          </Link>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
