@@ -1,5 +1,11 @@
+
+import React from 'react';
+// import  { useState } from 'react';
 import './App.css';
-import Footer from './components/Footer/Footer.jsx';
+import { UserContext } from '../src/UserContext'
+import { Routes, Route} from 'react-router-dom';
+import Layout from './components/Layout/Layout';
+import RequestQuote from './components/REquestQutoe/RequestQuote';import Footer from './components/Footer/Footer.jsx';
 import Header from './components/Header/Header'
 import {UserContext} from './UserContext'
 import React, { useState } from 'react'
