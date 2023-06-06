@@ -6,6 +6,7 @@ import { UserContext } from '../src/UserContext'
 import { Routes, Route} from 'react-router-dom';
 import Index from './components/Index';
 import RequestQuote from './components/REquestQutoe/RequestQuote';
+import ProductComponent from './components/ProductOverview/ProductComponent.jsx';
 
 import { useState } from 'react'
 
@@ -20,6 +21,7 @@ function App() {
      <Routes>
       <Route path='/' element={<Index/>}/>
       <Route path='/request-quote' element={<RequestQuote/>}/>
+      <Route path='/product' element={<ProductComponent/>}/>
      </Routes>
     </UserContext.Provider>
   )
