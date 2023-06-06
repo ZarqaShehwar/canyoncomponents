@@ -1,6 +1,6 @@
 import './App.css';
-import Footer from './components/Footer/Footer.jsx';
-import Header from './components/Header/Header'
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header';
 import {UserContext} from './UserContext'
 import React, { useState } from 'react'
 
