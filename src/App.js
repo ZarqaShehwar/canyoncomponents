@@ -4,7 +4,7 @@ import React from 'react';
 import './App.css';
 import { UserContext } from '../src/UserContext'
 import { Routes, Route} from 'react-router-dom';
-import Index from './components/Index';
+import Index from './components/Index.jsx';
 import RequestQuote from './components/REquestQutoe/RequestQuote';
 import ProductComponent from './components/ProductOverview/ProductComponent.jsx';
 
