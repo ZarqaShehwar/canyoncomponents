@@ -3,54 +3,104 @@ import { DataGrid } from '@mui/x-data-grid';
 import { Link } from 'react-router-dom';
 
 const columns = [
-  { field: 'id', headerName: 'ID', renderCell: (params) => (
-    <Link to={`/product`}>{params.row.id}</Link>
-  ), width: 70 },
-  { field: 'firstName', headerName: 'First name', width: 130 },
-  { field: 'lastName', headerName: 'Last name', width: 130 },
   {
-    field: 'age',
-    headerName: 'Age',
-    type: 'number',
+    field: 'Partno', headerName: 'Partno', 
+    renderCell: (params) => (
+      <Link to={`/product`}>{params.row.Partno}</Link>
+    ),
+     width: 140
+  },
+  { field: 'StartingPrice', headerName: 'StartingPrice', width: 50, type: 'number' },
+  { field: 'Stock', headerName: 'Stock', width: 100 },
+  {
+    field: 'Material',
+    headerName: 'Material',
+    // type: 'number',
     width: 90,
   },
   {
-    field: 'fullName',
-    headerName: 'Full name',
-    description: 'This column has a value getter and is not sortable.',
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.row.firstName || ''} ${params.row.lastName || ''}`,
+    field: 'Color',
+    headerName: 'Color',
+    // type: 'number',
+    width: 90,
   },
-  
+
+  {
+    field: 'Hardness',
+    headerName: 'Hardness',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'Scale',
+    headerName: 'Scale',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'Type',
+    headerName: 'Type',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'Size',
+    headerName: 'Size',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'cs',
+    headerName: 'cs',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'id',
+    headerName: 'id',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'Materialdesc',
+    headerName: 'Materialdesc',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'Heightemp',
+    headerName: 'Heightemp',
+    // type: 'number',
+    width: 90,
+  },
+  {
+    field: 'Lowtemp',
+    headerName: 'Lowtemp',
+    // type: 'number',
+    width: 90,
+  },
+
 ];
 
+
 const rows = [
-  { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
+  {Partno: 'CP80BK11-OR-204',StartingPrice: 10.00,Stock: 'OUT OF STOCK',Material: 'PLA',Color: 'Red',Hardness: 90,Scale: 'Shore B',Type: 'Wrist Wear',Size: 'AS568-204',cs: 3.53,id: 9.12,Materialdesc: 'CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA',Heightemp: 320,Lowtemp: -15,},
+  {Partno: 'CP80BK21-OR-204',StartingPrice: 120.00,Stock: 'IN STOCK',Material: 'PLA',Color: 'Blue',Hardness: 910,Scale: 'Shore C',Type: 'Wrist Wear',Size: 'AS568-204',cs: 3.53,id: 9.12,Materialdesc: 'CanRez CP80BK21 FFKM Black FDA USP VI 87 88 AED NACE Ultra Steam 8OA',Heightemp: 320,Lowtemp: -15,},
 ];
 
 const ProductTable = () => {
   return (
-    <div style={{ height: 550, width: '188%' }}>
+    <div style={{ height: 550, width: '87%' }}>
       <DataGrid
         rows={rows}
         columns={columns}
         initialState={{
           pagination: {
-            paginationModel: { page: 0, pageSize: 5 },
+            paginationModel: { page: 0, pageSize: 8 },
           },
         }}
-        pageSizeOptions={[5, 10]}
-        checkboxSelection
+        pageSizeOptions={[5, 7,8,9,10]}
+      // checkboxSelection
       />
     </div>
   );

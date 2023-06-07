@@ -23,9 +23,9 @@ const rows = [
   createData(31024, '1-2 Weeks', 1000, 9909, 10),
 ];
 
-function createDataTable1(Quantity1, Quantity2, Price, Discount) {
-  return { Quantity1, Quantity2, Price, Discount};
-}
+// function createDataTable1(Quantity1, Quantity2, Price, Discount) {
+//   return { Quantity1, Quantity2, Price, Discount};
+// }
 
 // s
 
