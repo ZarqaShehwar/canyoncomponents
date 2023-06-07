@@ -20,7 +20,7 @@ function SideMenu() {
             <li><a href="/">Home</a></li>
             <li>
                 <p onClick={()=>{
-                    setsideMenuBarDropDown(!sideMenuBarDropDown);
+                    sideMenuBarDropDown === false ? setsideMenuBarDropDown(!sideMenuBarDropDown):<></>;
                     setsideMenuBarDropDownIndex(1)
                 }}><ArrowDropDownIcon/>Products</p>
                 {
@@ -39,7 +39,7 @@ function SideMenu() {
             </li>
             <li>
                 <p onClick={()=>{
-                    setsideMenuBarDropDown(!sideMenuBarDropDown);
+                    sideMenuBarDropDown === false ? setsideMenuBarDropDown(!sideMenuBarDropDown):<></>;
                     setsideMenuBarDropDownIndex(2)
                 }}><ArrowDropDownIcon/>Materials</p>
                 {
@@ -58,7 +58,7 @@ function SideMenu() {
             </li>
             <li>
                 <p onClick={()=>{
-                    setsideMenuBarDropDown(!sideMenuBarDropDown);
+                    sideMenuBarDropDown === false ? setsideMenuBarDropDown(!sideMenuBarDropDown):<></>;
                     setsideMenuBarDropDownIndex(3)
                 }}><ArrowDropDownIcon/>Refrences</p>
                 {
@@ -77,7 +77,7 @@ function SideMenu() {
             </li>
             <li>
                 <p onClick={()=>{
-                    setsideMenuBarDropDown(!sideMenuBarDropDown);
+                    sideMenuBarDropDown === false ? setsideMenuBarDropDown(!sideMenuBarDropDown):<></>;
                     setsideMenuBarDropDownIndex(4)
                 }}><ArrowDropDownIcon/>Services</p>
                 {
@@ -96,7 +96,7 @@ function SideMenu() {
             </li>
             <li>
                 <p onClick={()=>{
-                    setsideMenuBarDropDown(!sideMenuBarDropDown);
+                    sideMenuBarDropDown === false ? setsideMenuBarDropDown(!sideMenuBarDropDown):<></>;
                     setsideMenuBarDropDownIndex(5)
                 }}><ArrowDropDownIcon/>Contact</p>
                 {
