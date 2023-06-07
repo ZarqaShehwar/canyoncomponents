@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/shopright.css';
-import CustomPaginationActionsTable from './CustomPaginationActionsTable';
+import ProductTable from './ProductTable';
+// import CustomPaginationActionsTable from './CustomPaginationActionsTable';
+
 
 const ShopRight = () => {
  
@@ -9,7 +11,8 @@ const ShopRight = () => {
       <div className="row">
         <h1>408,426 Results</h1>
       </div>
-    < CustomPaginationActionsTable/>
+    {/* < CustomPaginationActionsTable/> */}
+    <ProductTable/>
     </div>
     
   )

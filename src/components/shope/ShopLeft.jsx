@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./css/shopleft.css"
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 import CheckboxList from './CheckboxeList';
-import  dimensions  from "../../Static/Images/logo.png";
+import  dimensions  from "../../Static/Dimensions.jpg";
 import SliderComponent from './SliderComponent';
 
 

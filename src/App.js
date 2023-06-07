@@ -2,9 +2,12 @@
 import React from 'react';
 // import  { useState } from 'react';
 import './App.css';
-import Footer from './Components/Footer/Footer';
-import Header from './Components/Header/Header';
-import {UserContext} from './UserContext'
+import { UserContext } from '../src/UserContext'
+import { Routes, Route} from 'react-router-dom';
+import Index from './components/Index.jsx';
+import RequestQuote from './components/REquestQutoe/RequestQuote';
+import ProductComponent from './components/ProductOverview/ProductComponent.jsx';
+
 import { useState } from 'react'
 
 function App() {
@@ -15,10 +18,11 @@ function App() {
 
   return (
     <UserContext.Provider value={{sideMenuBar, setsideMenuBar, sideMenuBarDropDown, setsideMenuBarDropDown, sideMenuBarDropDownIndex, setsideMenuBarDropDownIndex}} >
-      <div className="App">
-      <Header/>
-      <Footer/>
-    </div>
+     <Routes>
+      <Route path='/' element={<Index/>}/>
+      <Route path='/request-quote' element={<RequestQuote/>}/>
+      <Route path='/product' element={<ProductComponent/>}/>
+     </Routes>
     </UserContext.Provider>
   )
 }

@@ -1,4 +1,4 @@
-import React,{ useContext, useEffect } from 'react';
+import React from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import Button from '@mui/material/Button';
@@ -7,10 +7,12 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import product from '../../Static/Images/product.png';
-import pdf from '../../Static/Images/pdf.png';
+import product from '../../Static/Dimensions.jpg';
+import pdf from '../../Static/Dimensions.jpg';
 import './ProductComponent.css';
-import {useParams} from 'react-router-dom';
+// import {useParams} from 'react-router-dom';
+import Layout from '../Layout/Layout';
+import Recomendeditems from './RecomendedItems';
 
 function createData(AvailableQuantity, LeadTimetoShip, Quantity, Price, Discount) {
   return { AvailableQuantity, LeadTimetoShip, Quantity, Price, Discount};
@@ -21,40 +23,34 @@ const rows = [
   createData(31024, '1-2 Weeks', 1000, 9909, 10),
 ];
 
-function createDataTable1(Quantity1, Quantity2, Price, Discount) {
-  return { Quantity1, Quantity2, Price, Discount};
-}
+// function createDataTable1(Quantity1, Quantity2, Price, Discount) {
+//   return { Quantity1, Quantity2, Price, Discount};
+// }
 
-const rowsTable1 = [
-  createDataTable1(0, 99, 1000, 8),
-  createDataTable1(100, 1000, 9909, 10),
-];
+// s
 
 
 
 
-
-function ProductComponent() {
+function ProductComponent(props) {
   
   
-  let { id } = useParams();
-  function getIndex(ItemNo) {
-    return props.itemData.findIndex(obj => obj.ItemNo === ItemNo);
-  }
+  
 
 
   return (
+  <Layout>
   
-    <div className='container'>
+    <div className='container1'>
         <div className="left">
-          <img src={product} alt="product" className='pimg'/>
+          <img  src={product}alt="product" className='pimg'/>
           <div className="sizes">
             <h3><span>CS</span>0.139 in (3.53 mm)</h3>
             <h3><span>ID</span>0.139 in (3.53 mm)</h3>
             <h3><span>OD</span>0.139 in (3.53 mm)</h3>
           </div>
           <div className="dataSheet">
-            <img src={pdf} alt="pdf" />
+            <img  src={pdf}  alt="pdf" />
             <a href="/"><Button variant="contained"><span>See Data Sheet</span></Button></a>
           </div>
           <div className="quantity">
@@ -63,11 +59,18 @@ function ProductComponent() {
         </div>
 
         <div className="right">
-          <h1><strong>{props.itemData[getIndex(id)].ItemNo}</strong></h1>
-          <h3><strong>Color: Black</strong><span></span></h3>
-          <h2><span>{props.itemData[getIndex(id)].Description}</span></h2>
+          <h1><strong>
+            {/* {props.itemData[getIndex(id)].ItemNo} */}
+            CB-1345
+            </strong></h1>
+          
+          <h2><span>
+            {/* {props.itemData[getIndex(id)].Description} */}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, totam?
+            </span></h2>
+            <h3><strong>Color: Black</strong><span></span></h3>
 
-        <div className="table1">
+        {/* <div className="table1">
         <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -86,14 +89,17 @@ function ProductComponent() {
               <TableCell component="th" scope="row">
                 <span>{row1.Quantity1} - {row1.Quantity2}</span>
               </TableCell>
-              <TableCell align="right"><span>${props.itemData[getIndex(id)].UnitPrice}</span></TableCell>
+              <TableCell align="right"><span>
+                {/* ${props.itemData[getIndex(id)].UnitPrice} */}
+                {/* 20 */}
+                {/* </span></TableCell>
               <TableCell align="right"><span>{row1.Discount}%</span></TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </TableContainer>
-        </div>
+        </div> */} 
 
 
           <div className="table">
@@ -132,6 +138,8 @@ function ProductComponent() {
 </Button>
         </div>
     </div>
+      <Recomendeditems/>
+  </Layout>
   )
 }
 

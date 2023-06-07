@@ -19,7 +19,7 @@ import logo from '../../Static/Images/logo.png'
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import Button from '@mui/material/Button';
 import { UserContext } from '../../UserContext';
-
+import {Link} from "react-router-dom"
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -168,6 +168,7 @@ export default function NavBar() {
         }
       } >
         <Toolbar>
+          <Link to="/">
           
           <img
             src={logo}
@@ -175,6 +176,7 @@ export default function NavBar() {
             alt='logo'
             sx={{ display: { xs: 'none', sm: 'block' }}}
           />
+          </Link>
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -202,7 +204,10 @@ export default function NavBar() {
               aria-label="show 17 new notifications"
               color="inherit"
             >
+              <Link to="/request-quote">
+
               <Button variant="contained" sx={{ backgroundColor: '#F4976C', fontWeight: '600' }}>Get A Quote</Button>
+              </Link>
             </IconButton>
             <IconButton
               size="large"

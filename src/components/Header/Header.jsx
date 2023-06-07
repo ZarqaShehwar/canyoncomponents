@@ -1,9 +1,20 @@
-import React from 'react'
-import './Header.css'
-const Header = () => {
-   
+import '../Header/Header.css'
+import NavBar from './Navbar';
+import SideMenu from './SideMenu';
+import { UserContext  } from '../../UserContext';
+import React, { useContext } from 'react'
+
+function Header() {
+
+  const {sideMenuBar, setsideMenuBar} = useContext(UserContext)
+
   return (
-    <div>Header</div>
+    <div className="header">
+       <NavBar/>
+       {
+        sideMenuBar === true ? <SideMenu/> :<></>
+       }
+      </div>
   )
 }
 
