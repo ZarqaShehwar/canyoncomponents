@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "./css/shopleft.css"
 import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
 import CheckboxList from './CheckboxeList';
 import  dimensions  from "../../Static/Dimensions.jpg";
 import SliderComponent from './SliderComponent';
+import CartPopup from '../CartPopup/CartPopup';
+import { UserContext } from '../../UserContext';
+// import { Link } from 'react-router-dom';
 
 
 const ShopLeft = () => {
+  const {isCartopen,setisCartopen}=useContext(UserContext);
   const [selectedCountry, setSelectedCountry] = useState("");
   const countries = ["USA", "Canada", "Mexico", "Brazil", "Japan"];
   const [size, setsize] = useState(0);
@@ -27,12 +31,18 @@ const ShopLeft = () => {
         <h2>KEYWORD</h2>
         <div className='hr' ></div>
       </div>
-      <form className='keywoedSearch' action="">
+      <div className='keywoedSearch'>
         <div>
           <input type="text" placeholder='Search' className='searchinput' />
         </div>
-        <button type="submit" className='search'>Search</button>
-      </form>
+       
+        
+        <button  className='search'onClick={()=>{setisCartopen(true)}}>Search</button>
+       
+      </div>
+      {
+        isCartopen&&<CartPopup/>
+      }
       <div className="flex">
 
 

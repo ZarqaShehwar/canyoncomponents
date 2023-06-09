@@ -121,12 +121,12 @@ import { Link,useNavigate } from 'react-router-dom';
             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             .map((row) => {
               return (
-                <TableRow hover role="checkbox" tabIndex={-5} key={row.Partno} on>
+                <TableRow hover role="checkbox" tabIndex={-5} key={row.Partno} >
                   {columns.map((column) => {
                     const value = row[column.id];
                     return (
                       
-                      <TableCell key={column.id} align={column.align} onClick={()=>{navigate('/product')}}>
+                      <TableCell key={column.id} align={column.align}  >
                       
                         {column.format && typeof value === 'number'
                           ? column.format(value)
