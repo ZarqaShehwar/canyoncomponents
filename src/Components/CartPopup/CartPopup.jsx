@@ -1,4 +1,4 @@
-import React, { Component, useContext } from 'react';
+import React, {  useContext } from 'react';
 import '../CartPopup/CartPopup.css'
 import { AiFillCloseCircle, AiFillInfoCircle } from 'react-icons/ai';
 import { BiArrowBack } from 'react-icons/bi';
@@ -36,6 +36,7 @@ const CartPopup = () => {
                                 <td>$28.81</td>
                                 <td><AiFillCloseCircle color='#F4966B' /></td>
                             </tr>
+                            {/* {product.map()} */}
                             <tr>
                                 <td><div className="flex">
                                     <img src={product} alt="product"  height={80} width={80}  />

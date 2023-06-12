@@ -7,7 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
-import { Link,useNavigate } from 'react-router-dom';
+// import { Link,useNavigate } from 'react-router-dom';
 
   const CustomPaginationActionsTable = () => {
   const columns = [
@@ -97,10 +97,9 @@ import { Link,useNavigate } from 'react-router-dom';
       randomLowtemp
     ));
   }
-  const navigate =useNavigate();
   
   return (
-    <Paper sx={{ width: '97%', overflow: 'hidden' }}>
+    <Paper sx={{ width: '76%', overflow: 'hidden' }}>
     <TableContainer sx={{ maxHeight: 540 }}>
       <Table stickyHeader aria-label="sticky table">
         <TableHead >

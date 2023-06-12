@@ -13,6 +13,7 @@ const ShopLeft = () => {
   const {isCartopen,setisCartopen}=useContext(UserContext);
   const [selectedCountry, setSelectedCountry] = useState("");
   const countries = ["USA", "Canada", "Mexico", "Brazil", "Japan"];
+  const [isopen, setisopen] = useState(false)
   const [size, setsize] = useState(0);
   const [cs, setCs] = useState(0);
   const [id, setid] = useState(0)
@@ -73,13 +74,15 @@ const ShopLeft = () => {
       </select>
      </div>
       <div className="row">
-        <AiFillCaretDown />
+        <AiFillCaretDown onClick={()=>{setisopen(!isopen)}}/>
+       
         <input type="text" className='sizeinput' placeholder='Size' value={size} />
         <div className='updown'>
           <AiFillCaretUp onClick={()=>{setsize(size+1)}} />
           <AiFillCaretDown onClick={()=>{setsize(size===0?0:size-1)}} />
 
         </div>
+     
         <input type="text" className='sizeinput' placeholder='CS' value={cs}/>
         <div className='updown'>
           <AiFillCaretUp onClick={()=>{setCs(cs+1)}} />
@@ -92,7 +95,23 @@ const ShopLeft = () => {
           <AiFillCaretDown  onClick={()=>{setid(id===0?0:id-1)}} />
 
         </div>
+     
       </div>
+      {
+          isopen?
+          <div>
+            <div style={{width:'15vw',height:'20vh',marginTop:'2rem',border:"2px solid black",overflowY:'scroll'}}>
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+            </div>
+          </div>:<></>
+        }
       <div className="flex">
       <h2>TEMPRATURE &deg; C</h2>
       <div className='hr' ></div>
