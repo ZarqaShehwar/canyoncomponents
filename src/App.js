@@ -4,9 +4,9 @@ import React from 'react';
 import './App.css';
 import { UserContext } from '../src/UserContext'
 import { Routes, Route} from 'react-router-dom';
-import Index from './Components/Index.jsx';
-import RequestQuote from './Components/REquestQutoe/RequestQuote';
-import ProductComponent from './Components/ProductOverview/ProductComponent.jsx';
+import Index from './components/Index.jsx';
+import RequestQuote from './components/REquestQutoe/RequestQuote';
+import ProductComponent from './components/ProductOverview/DetailedDesc/DetailedDesc';
 
 import { useState } from 'react'
 import CartPopup from './components/CartPopup/CartPopup';
@@ -26,6 +26,7 @@ function App() {
       {/* <Route path='/' element={<CheckPrice/>}/> */}
       <Route path='/request-quote' element={<RequestQuote/>}/>
       <Route path='/add-to-cart' element={<CartPopup/>}/>
+      <Route path='/product' element={<ProductComponent/>}/>
      </Routes>
     </UserContext.Provider>
   )

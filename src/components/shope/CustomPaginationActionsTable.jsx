@@ -7,9 +7,11 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
+import { useNavigate } from 'react-router-dom';
 // import { Link,useNavigate } from 'react-router-dom';
 
   const CustomPaginationActionsTable = () => {
+    const navigate =useNavigate();
   const columns = [
     { id: 'Partno', label: 'Partno', minWidth: 50 },
     { id: 'StartingPrice', label: 'Price', minWidth: 50 },
@@ -125,7 +127,7 @@ import TableRow from '@mui/material/TableRow';
                     const value = row[column.id];
                     return (
                       
-                      <TableCell key={column.id} align={column.align}  >
+                      <TableCell key={column.id} align={column.align}  onClick={()=>{navigate('/product')}}>
                       
                         {column.format && typeof value === 'number'
                           ? column.format(value)
