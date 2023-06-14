@@ -6,7 +6,7 @@ import { UserContext } from '../src/UserContext'
 import { Routes, Route} from 'react-router-dom';
 import Index from './components/Index.jsx';
 import RequestQuote from './components/REquestQutoe/RequestQuote';
-import ProductComponent from './components/ProductOverview/DetailedDesc/DetailedDesc';
+import ProductComponent from './components/ProductOverview/ProductComponent';
 
 import { useState } from 'react'
 import CartPopup from './components/CartPopup/CartPopup';
