@@ -10,12 +10,14 @@
     position: relative;
     width: 5rem;
     height: 2rem;
-    border-color: #F9A66C;
+    border-color: black;
+    border-radius: 2px;
 }
 
 .btnqty {
     width: 24rem;
-    height: 2.0rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
     background-color: #F4976C;
     color: wheat;
 }

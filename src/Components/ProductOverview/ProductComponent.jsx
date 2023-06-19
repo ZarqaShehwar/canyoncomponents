@@ -12,13 +12,15 @@ import CartPopup from '../CartPopup/CartPopup';
 import { UserContext } from '../../UserContext';
 
 function ProductComponent() {
+  
   const {isCartopen}=useContext(UserContext);
   return (
 
     <Layout><div className="productComponent ">
     <div className="productDesc">
       <img src={product} alt="product" />
-      <div className="productInfo">
+      <div className="productInfo" >
+        
         <h1>B100-010</h1>
         <h4>CanRez™ CP75BK20 is our ultra high temperature FFKM. Ultra low compression set & capable of excursions to 350°C. Compare Kalrez 7075.</h4>
         <p>Color: <span>Black</span> <span id='circleColor'></span> </p>
