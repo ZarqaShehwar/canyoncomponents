@@ -1,0 +1,55 @@
+.contain {
+    border: 1px solid rgb(121, 120, 117);
+    /* height: 10vh; */
+    width: 35vw;
+}
+.bord{
+    position: relative;
+}
+.qnty {
+    position: relative;
+    width: 5rem;
+    height: 2rem;
+    border-color: black;
+    border-radius: 2px;
+}
+
+.btnqty {
+    width: 24rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
+    background-color: #F4976C;
+    color: wheat;
+}
+
+.btnqty:hover {
+    background-color: #1565C0;
+
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.flex1{
+    /* display: flex; */
+    
+}
+.table{
+    margin: 2vw;
+}
+
+.addtocart{
+    width: 8rem;
+    height: 1.5rem;
+    background-color: #F4976B;
+    color: wheat;
+    float: right;
+}
+.addtocart:hover{
+   
+    background-color: #1565C0;
+  
+}

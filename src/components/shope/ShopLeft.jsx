@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import "./css/shopleft.css"
-import { AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
+import { AiFillCaretDown } from 'react-icons/ai';
 import CheckboxList from './CheckboxeList';
 import  dimensions  from "../../Static/Dimensions.jpg";
 import SliderComponent from './SliderComponent';
+import CartPopup from '../CartPopup/CartPopup';
+import { UserContext } from '../../UserContext';
+// import { Link } from 'react-router-dom';
 
 
 const ShopLeft = () => {
+  const {isCartopen,setisCartopen}=useContext(UserContext);
   const [selectedCountry, setSelectedCountry] = useState("");
   const countries = ["USA", "Canada", "Mexico", "Brazil", "Japan"];
+  const [isopen, setisopen] = useState(false)
   const [size, setsize] = useState(0);
   const [cs, setCs] = useState(0);
   const [id, setid] = useState(0)
@@ -27,12 +32,18 @@ const ShopLeft = () => {
         <h2>KEYWORD</h2>
         <div className='hr' ></div>
       </div>
-      <form className='keywoedSearch' action="">
+      <div className='keywoedSearch'>
         <div>
           <input type="text" placeholder='Search' className='searchinput' />
         </div>
-        <button type="submit" className='search'>Search</button>
-      </form>
+       
+        
+        <button  className='search'onClick={()=>{setisCartopen(true)}}>Search</button>
+       
+      </div>
+      {
+        isCartopen&&<CartPopup/>
+      }
       <div className="flex">
 
 
@@ -63,26 +74,38 @@ const ShopLeft = () => {
       </select>
      </div>
       <div className="row">
-        <AiFillCaretDown />
-        <input type="text" className='sizeinput' placeholder='Size' value={size} />
+        <AiFillCaretDown onClick={()=>{setisopen(!isopen)}}/>
+       
+        <input type="number" className='sizeinput' placeholder='Size'min={0} onChange={(e)=>{setsize(e.target.value);}} />
         <div className='updown'>
-          <AiFillCaretUp onClick={()=>{setsize(size+1)}} />
-          <AiFillCaretDown onClick={()=>{setsize(size===0?0:size-1)}} />
 
         </div>
-        <input type="text" className='sizeinput' placeholder='CS' value={cs}/>
+     
+        <input type="number" className='sizeinput' placeholder='CS'min={0}  onChange={(e)=>{setCs(e.target.value)}}/>
         <div className='updown'>
-          <AiFillCaretUp onClick={()=>{setCs(cs+1)}} />
-          <AiFillCaretDown  onClick={()=>{setCs(cs===0?0:cs-1)}}/>
 
         </div>
-        <input type="text" className='sizeinput' placeholder='ID' value={id}/>
+        <input type="number" className='sizeinput' placeholder='ID' min={0}  onChange={(e)=>{setid(e.target.value)}}/>
         <div className='updown'>
-          <AiFillCaretUp  onClick={()=>{setid(id+1)}}/>
-          <AiFillCaretDown  onClick={()=>{setid(id===0?0:id-1)}} />
 
         </div>
+     
       </div>
+      {
+          isopen?
+          <div>
+            <div style={{width:'15vw',height:'20vh',marginTop:'2rem',border:"2px solid grey",overflowY:'scroll'}}>
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+              <input type="checkbox" name="" id="" />10 20 30 <br />
+            </div>
+          </div>:<></>
+        }
       <div className="flex">
       <h2>TEMPRATURE &deg; C</h2>
       <div className='hr' ></div>

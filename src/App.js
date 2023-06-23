@@ -4,11 +4,13 @@ import React from 'react';
 import './App.css';
 import { UserContext } from '../src/UserContext'
 import { Routes, Route} from 'react-router-dom';
-import Index from './Components/Index.jsx';
-import RequestQuote from './Components/REquestQutoe/RequestQuote';
-import ProductComponent from './Components/ProductOverview/ProductComponent.jsx';
+import Index from './components/Index.jsx';
+import RequestQuote from './components/REquestQutoe/RequestQuote';
+import ProductComponent from './components/ProductOverview/ProductComponent';
 
 import { useState } from 'react'
+import CartPopup from './components/CartPopup/CartPopup';
+// import CheckPrice from './components/CheckPrice/CheckPrice';
 
 function App() {
 
@@ -16,11 +18,14 @@ function App() {
   const [sideMenuBarDropDown, setsideMenuBarDropDown] = useState(false)
   const [sideMenuBarDropDownIndex, setsideMenuBarDropDownIndex] = useState(false)
 
+  const [isCartopen, setisCartopen] = useState(false)
   return (
-    <UserContext.Provider value={{sideMenuBar, setsideMenuBar, sideMenuBarDropDown, setsideMenuBarDropDown, sideMenuBarDropDownIndex, setsideMenuBarDropDownIndex}} >
+    <UserContext.Provider value={{sideMenuBar,isCartopen,setisCartopen, setsideMenuBar, sideMenuBarDropDown, setsideMenuBarDropDown, sideMenuBarDropDownIndex, setsideMenuBarDropDownIndex}} >
      <Routes>
       <Route path='/' element={<Index/>}/>
+      {/* <Route path='/' element={<CheckPrice/>}/> */}
       <Route path='/request-quote' element={<RequestQuote/>}/>
+      <Route path='/add-to-cart' element={<CartPopup/>}/>
       <Route path='/product' element={<ProductComponent/>}/>
      </Routes>
     </UserContext.Provider>
